@@ -11,10 +11,10 @@ enterButton.addEventListener("click", function () {
   if (active === 0) {
     let userEntry = prompt(`What's the password?`);
     if (userEntry === passWord) {
-      alert("ACCESS GRANTED");
+      alert("ACCESS GRANTED 🟢 ");
       unlock();
     } else {
-      alert("ACCESS DENIED");
+      alert("ACCESS DENIED 🛑 ");
     }
   }
 });
