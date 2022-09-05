@@ -2,6 +2,7 @@ const enterButton = document.querySelector(".btn--clickme");
 const box = document.querySelector(".center--box");
 const birthDay = "122996";
 const passWord = "bzieo";
+const portfolioPW = '1111';
 
 let active = 0;
 
@@ -15,7 +16,13 @@ const gottem = function () {
 const unlock = function () {
   enterButton.classList.add("hidden");
   box.classList.add("entered-box");
-  location.replace("/main.html");
+  location.replace("/PersonalSite/main.html");
+};
+
+const portfolio = function () {
+  enterButton.classList.add("hidden");
+  box.classList.add("entered-box");
+  location.replace("/PortfolioSite/portfolio.html");
 };
 
 const exitScreen = function () {
@@ -34,7 +41,10 @@ enterButton.addEventListener("click", function () {
       gottem();
     } else if (userEntry === passWord) {
       unlock();
-    } else {
+    } else if (userEntry === portfolioPW) {
+      portfolio();
+    }
+      else {
       alert("ACCESS DENIED 🛑 ");
     }
   }
